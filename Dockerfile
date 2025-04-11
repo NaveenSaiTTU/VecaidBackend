@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /app
+COPY xgb_model.pkl .
 
 RUN pip install --upgrade pip
 COPY requirements.txt .
