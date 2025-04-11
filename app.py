@@ -93,5 +93,7 @@ def predict():
 # ========================
 # Start Server
 # ========================
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5001)
+# if __name__ == "__main__":
+#     app.run(debug=True, host="0.0.0.0", port=5001)
+# No need for app.run() block when using Gunicorn
+# app instance will be served by Gunicorn via Dockerfile CMD
