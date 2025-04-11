@@ -198,3 +198,5 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+# This code is a Flask web application that provides an API endpoint for stock price predictions.
