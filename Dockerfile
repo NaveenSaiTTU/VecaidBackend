@@ -17,4 +17,5 @@ RUN python -m nltk.downloader vader_lexicon
 
 EXPOSE 5001
 
-CMD ["python", "app.py"]
+CMD ["gunicorn", "-b", "0.0.0.0:5001", "app:app"]
+
