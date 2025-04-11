@@ -9,3 +9,4 @@ nltk==3.9.1
 flask==3.1.0
 flask-cors==5.0.1
 matplotlib==3.9.4
+gunicorn
