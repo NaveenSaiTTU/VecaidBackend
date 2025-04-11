@@ -171,7 +171,8 @@ def options_contracts_signal(ticker, std_multiplier=2):
 
 if __name__ == "__main__":
     ticker = "AAPL"
-    data = yf.download(ticker, start="2021-01-01", end=datetime.date.today().strftime('%Y-%m-%d'))[['Adj Close','Close','High','Low','Volume']].copy()
+    # data = yf.download(ticker, start="2021-01-01", end=datetime.date.today().strftime('%Y-%m-%d'))[['Adj Close','Close','High','Low','Volume']].copy()
+    data = yf.download(ticker, start="2021-01-01", end=datetime.date.today().strftime('%Y-%m-%d'), auto_adjust=False)[['Close','High','Low','Volume']].copy()
     data = create_lag_features(data)
     data["target"] = data["Close"].shift(-FORECAST_HORIZON)
     data.dropna(inplace=True)
